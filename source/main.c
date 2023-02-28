@@ -3,6 +3,7 @@
 #include <signal.h>
 #include <time.h>
 #include "driver/elevio.h"
+#include "Driver.h"
 
 
 
@@ -15,17 +16,12 @@ int main(){
     elevio_motorDirection(DIRN_UP);
 
     while(1){
+        currentfloor = elevio_floorSensor();
+        
         int floor = elevio_floorSensor();
         printf("floor: %d \n",floor);
 
-        if(floor == 0){
-            elevio_motorDirection(DIRN_UP);
-        }
-
-        if(floor == N_FLOORS-1){
-            elevio_motorDirection(DIRN_DOWN);
-        }
-
+       
 
         for(int f = 0; f < N_FLOORS; f++){
             for(int b = 0; b < N_BUTTONS; b++){
