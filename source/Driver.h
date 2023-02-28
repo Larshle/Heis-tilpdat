@@ -1,7 +1,7 @@
 #pragma once
 #include "driver/elevio.h"
 
-extern int currentfloor; // have to have an 
+extern int currentfloor; // have to have an global varibal for currentfloor, having this in the function memory keeps it away form stack
 
 typedef enum
 {
