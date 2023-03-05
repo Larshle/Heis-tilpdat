@@ -15,3 +15,5 @@ typedef struct Q_floor_condition Q_condition;
 
 extern Q_condition Q[N_FLOORS];
 
+void pull_buttons();
+
