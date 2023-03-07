@@ -16,3 +16,13 @@ void start_elvo(){
         state = STANDBY;
     }
 }
+
+void stop_pressed(){
+    if(elevio_stopButton()){
+        elevio_motorDirection(DIRN_STOP);
+        state == STOP;
+        elevio_stopLamp(1);
+        clear_Q();
+    }
+
+}

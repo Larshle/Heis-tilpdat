@@ -17,9 +17,10 @@ int main(){
 
     while(1){
         currentfloor = elevio_floorSensor();
-        start_elvo();
+        
         int floor = elevio_floorSensor();
         printf("floor: %d \n",floor);
+        printf(queue);
 
        
 
