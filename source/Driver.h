@@ -18,3 +18,5 @@ extern Elevator_state state;
 void start_elvo(); // when the elevator starts it goes to a floor
 
 void stop_pressed();
+
+void drive();

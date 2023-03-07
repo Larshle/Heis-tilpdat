@@ -5,7 +5,7 @@
 
 struct Q_floor_condition
 {
-    int active; //om det er noe i køen
+    int active; 
     int waitup;
     int waitdown;
     int stop;
@@ -17,12 +17,13 @@ typedef struct Q_floor_condition Q_condition; // typedef for å ikke trenge å d
 
 extern Q_condition Q[N_FLOORS]; // lage den ekstern
 
-void queue(int floor, ButtonType btn);
+void add_to_queue(int floor, ButtonType btn);
 
 void pull_buttons();
 
 void clear_Q();
 
+void remove_from_queue();
 
 
 
