@@ -10,12 +10,10 @@ void pull_buttons(){ // sjekker om knapp blir trykket og legger til i kø
                 int btnPressed = elevio_callButton(f, b);
                 if (btnPressed){
                     add_to_queue(f, b);
-            } else{
-                state == STANDBY;
-            }
+            } 
         }
     }
-    stop_pressed();
+    
 
 }
 

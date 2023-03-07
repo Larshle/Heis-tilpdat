@@ -1,4 +1,5 @@
 #pragma once
+#include "Driver.h"
 #include "driver/elevio.h"
 #include "Queue_handler.h"
 
@@ -20,3 +21,5 @@ void start_elvo(); // when the elevator starts it goes to a floor
 void stop_pressed();
 
 void drive();
+
+void standby();

@@ -20,7 +20,9 @@ int main(){
         
         int floor = elevio_floorSensor();
         printf("floor: %d \n",floor);
-       
+        start_elvo();
+
+        stop_pressed();
 
        
 
