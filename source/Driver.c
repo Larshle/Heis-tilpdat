@@ -16,6 +16,7 @@ void start_elvo(){
         elevio_motorDirection(DIRN_STOP);
         state = STANDBY;
     }
+    lastfloor = currentfloor;
 }
 
 void stop_pressed(){
