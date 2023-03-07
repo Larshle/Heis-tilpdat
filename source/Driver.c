@@ -3,7 +3,7 @@
 #include "Queue_handler.h"
 
 
-int currentfloor = -1 ;
+int currentfloor = -1;
 Elevator_state state = START;
 
 void start_elvo(){
