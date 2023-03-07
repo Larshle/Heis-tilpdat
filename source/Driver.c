@@ -38,6 +38,7 @@ void drive(){
             start_elvo(); // går til en start etasje om den er mellom
         }
     while(check_queue()){
+        state = DRIVE;
 
     }
 }

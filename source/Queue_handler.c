@@ -57,10 +57,9 @@ void remove_from_queue(){
     Q[currentfloor].waitdown = 0;
     Q[currentfloor].stop = 0;
     Q[currentfloor].waitup = 0;
-
 }
 
-int check_queue(){
+int check_queue(){ 
     for (int i = 0; i < N_FLOORS; i++){
         if(Q[i].active){
             return 1;

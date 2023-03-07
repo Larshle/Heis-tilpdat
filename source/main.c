@@ -20,7 +20,7 @@ int main(){
         
         int floor = elevio_floorSensor();
         printf("floor: %d \n",floor);
-        printf(queue);
+       
 
        
 

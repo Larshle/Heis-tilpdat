@@ -26,7 +26,7 @@ void clear_Q();
 
 void remove_from_queue();
 
-int check_queue();
+int check_queue();//sjekker om det er aktivt, altsa noe i køen
 
 
 
