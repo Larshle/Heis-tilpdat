@@ -3,3 +3,5 @@
 #include "Driver.h"
 
 void floor_light(); // setter riktig etasjelys 
+
+void clear_lights();

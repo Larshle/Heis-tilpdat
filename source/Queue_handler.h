@@ -1,6 +1,7 @@
 #pragma once
 #include "driver/elevio.h"
 #include "Driver.h"
+#include "Lights_handler.h"
 #include <stdio.h>
 
 struct Q_floor_condition
@@ -25,6 +26,7 @@ void clear_Q();
 
 void remove_from_queue();
 
+int check_queue();
 
 
 

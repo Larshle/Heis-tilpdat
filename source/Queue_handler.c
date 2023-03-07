@@ -9,7 +9,7 @@ void pull_buttons(){ // sjekker om knapp blir trykket og legger til i kø
                 
                 int btnPressed = elevio_callButton(f, b);
                 if (btnPressed){
-                    queue(f, b);
+                    add_to_queue(f, b);
             } else{
                 state == STANDBY;
             }
@@ -20,9 +20,6 @@ void pull_buttons(){ // sjekker om knapp blir trykket og legger til i kø
 }
 
 void add_to_queue(int floor, ButtonType btn){
-        if (state == START){
-            start_elvo(); // går til en start etasje om den er mellom
-        }
 
         Q[floor].active = 1; // setter til at det er noe i køen/aktivt
 
@@ -52,6 +49,8 @@ void clear_Q(){
         Q[i].waitdown = 0;
         Q[i].waitup = 0;
     }
+    clear_lights();
+
 }
 
 void remove_from_queue(){
@@ -59,4 +58,14 @@ void remove_from_queue(){
     Q[currentfloor].stop = 0;
     Q[currentfloor].waitup = 0;
 
+}
+
+int check_queue(){
+    for (int i = 0; i < N_FLOORS; i++){
+        if(Q[i].active){
+            return 1;
+        } else{
+            return 0;
+        }
+    }
 }
